@@ -72,7 +72,7 @@ Stash >> newTagFor: aStashObject [
 	  , self nextUUID printString
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Stash >> nextUUID [
 
 	^ uuid := uuid + 1
@@ -110,8 +110,8 @@ Stash >> serialize: anObject [
 Stash >> sourceCode [
 
 	| expr |
-	expr := RBParser parseExpression: stream contents expandMacros.
-	^ RBSimpleFormatter format: expr
+	expr := OCParser parseExpression: stream contents expandMacros.
+	^ OCSimpleFormatter format: expr
 ]
 
 { #category : #private }
