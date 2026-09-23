@@ -110,8 +110,8 @@ Stash >> serialize: anObject [
 Stash >> sourceCode [
 
 	| expr |
-	expr := OCParser parseExpression: stream contents expandMacros.
-	^ OCSimpleFormatter format: expr
+	expr := RBParser parseExpression: stream contents expandMacros.
+	^ RBSimpleFormatter format: expr
 ]
 
 { #category : #private }
