@@ -72,7 +72,7 @@ Stash >> newTagFor: aStashObject [
 	  , self nextUUID printString
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Stash >> nextUUID [
 
 	^ uuid := uuid + 1

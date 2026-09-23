@@ -25,5 +25,8 @@ BlockClosure >> asStashConstructor [
 				  context: self;
 				  signal:
 					  'The BlockClosure reference an outer context. It cannot be serialize without risk.' ].
-	^ self printString
+	
+	Smalltalk hasCompiler ifFalse: [ ^'[]' ].
+
+	^ self sourceNode value sourceCode
 ]
